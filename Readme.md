@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Adilet Egemberdiev](https://up.htmlacademy.ru/adaptive/23/user/1790213).
-* Наставник: [Tatiana Simonenko](https://htmlacademy.ru/profile/tatien).
+* Наставник: `Неизвестно`.
 
 ---
 
