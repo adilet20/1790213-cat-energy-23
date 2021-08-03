@@ -1,0 +1,26 @@
+@mixin set-padding () {
+  padding-left: $phones-padding;
+  padding-right: $phones-padding;
+
+  @media (min-width: $tablets) {
+    padding-left: $tablets-padding;
+    padding-right: $tablets-padding;
+  }
+
+  @media (min-width: $desktops) {
+    padding-left: $desktops-padding;
+    padding-right: $desktops-padding;
+  }
+}
+
+@mixin set-wrapper () {
+  @media (min-width: $tablets) {
+    max-width: $tablets;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+  }
+
+  @media (min-width: $desktops) {
+    max-width: $desktops;
+  }
+}

@@ -2,7 +2,9 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи: Каталог продукции</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
   <header class="header">
@@ -70,29 +72,23 @@
             </div>
           </div>
           <div class="fields__contacts contacts">
-            <div class="contacts__box">
-              <h2 class="contacts__title">Контактные данные (владельца кота)</h2>
-            </div>
-            <div class="contacts__box-2">
+            <h2 class="contacts__title">Контактные данные (владельца кота)</h2>
+            <div class="contacts-wrap">
               <label class="contacts__label" for="email">E-mail:*</label>
               <input class="contacts__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
             </div>
-            <div class="contacts__box-2">
+            <div class="contacts-wrap">
               <label class="contacts__label" for="phone">Телефон:*</label>
               <input class="contacts__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
             </div>
           </div>
           <div class="fields__comments comments">
-            <div class="comments__box">
-              <h2 class="comments__title">Комментарий</h2>
-            </div>
+            <h2 class="comments__title">Комментарий</h2>
             <textarea class="comments__textarea" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
           <div class="fields__addition addition">
-            <div class="addition__box">
-              <h2 class="addition__title">Дополнительно</h2>
-            </div>
-            <div class="addition__box-2">
+            <h2 class="addition__title">Дополнительно</h2>
+            <div class="addition-wrap">
               <ul class="addition__list">
                 <li class="addition__item">
                   <input class="addition__input" type="checkbox"  id="sweetener" name="sweetener" checked>
@@ -128,7 +124,7 @@
       <div class="contacts-wrapper">
         <h3 class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</h3>
       </div>
-      <div class="contacts__adress">
+      <div class="contacts__address">
         <p class="contacts__street">ул. Большая Конюшенная, д. 19/8</p>
         <p class="contacts__city">Санкт-Петербург</p>
       </div>
@@ -172,4 +168,3 @@
 </footer>
 </body>
 </html>
-
