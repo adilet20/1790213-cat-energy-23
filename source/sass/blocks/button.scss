@@ -1,0 +1,46 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  // padding: 7px 22px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $background-color;
+  background-color: $basic-green;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    color: rgba($background-color, 0.3);
+  }
+}
+
+.program__link-button {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 11px 22px;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    color: rgba($background-color, 0.3);
+  }
+
+  @media (min-width: $tablets) {
+    width: auto;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

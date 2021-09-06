@@ -9,45 +9,12 @@
   line-height: 18px;
   font-weight: normal;
   color: $special-dark-grey;
+  background-color: $background-color;
   margin: 0;
   padding: 0;
-}
 
-
-@media (min-width: $tablets) {
-  .page__body {
-  font-size: 16px;
-  line-height: 24px;
+  @media (min-width: $tablets) {
+    font-size: 16px;
+    line-height: 24px;
   }
-
 }
-
-@media (min-width: $desktops) {
-  body {
-    position: relative;
-  }
-
-}
-
-.page img {
-  max-width: 100%;
-  height: auto;
-}
-
-.page a {
-  text-decoration: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-

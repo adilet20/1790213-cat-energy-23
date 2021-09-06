@@ -1,7 +1,20 @@
 // Начните писать стили здесь
-@import "normalize.scss";
 @import "global/fonts.scss";
 @import "variables.scss";
 @import "mixins.scss";
 @import "global/page.scss";
+@import "global/global-pages.scss";
 @import "global/wrapper.scss";
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/program.scss";
+@import "blocks/promo-list.scss";
+@import "blocks/button.scss";
+@import "blocks/instruction.scss";
+@import "blocks/examples.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/catalog.scss";
+@import "blocks/additional.scss";
+@import "blocks/advertising.scss";

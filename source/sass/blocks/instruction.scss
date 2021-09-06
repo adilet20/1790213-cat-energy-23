@@ -1,0 +1,186 @@
+.instruction {
+  padding-top: 27px;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablets) {
+    max-width: 100%;
+    padding-top: 45px;
+    padding-bottom: 0;
+    box-shadow: inset 0 -1px $border-color-2;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 72px;
+    box-shadow: none;
+  }
+}
+
+.instruction__title {
+  margin-bottom: 38px;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: $basic-black;
+
+  @include list-none;
+
+  @media (min-width: $tablets) {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+  }
+}
+
+.instruction__list {
+  @include list-none;
+
+  counter-reset: item_number;
+
+  @media (min-width: $tablets) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktops) {
+    justify-content: flex-start;
+  }
+}
+
+.instruction__item:first-child {
+  margin-top: 38px;
+
+  @media (min-width: $tablets) {
+    margin-top: 0;
+  }
+}
+
+
+.instruction__item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  counter-increment: item_number;
+
+  @media (min-width: $tablets) {
+    display: block;
+    width: calc(50% - 30px);
+    min-height: 265px;
+    margin-bottom: 53px;
+    padding-top: 30px;
+    overflow: hidden;
+  }
+
+  @media (min-width: $desktops) {
+    width: calc((100% - 80px * 3) / 4);
+    margin-right: 80px;
+    margin-bottom: 0;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: static;
+    display: block;
+    flex-shrink: 0;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px 50px;
+
+    @media (min-width: $tablets) {
+      width: 80px;
+      height: 80px;
+      margin-top: 2px;
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+  }
+
+  &--first::before {
+    background-image: url("../img/icon-leaf@1x.png");
+  }
+
+  &--second::before {
+    background-image: url("../img/icon-tub@1x.png");
+  }
+
+  &--third::before {
+    background-image: url("../img/icon-eat@1x.png");
+  }
+
+  &--fourth::before {
+    background-image: url("../img/icon-alarm@1x.png");
+  }
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    &--first::before {
+      background-image: url("../img/icon-leaf@2x.png");
+    }
+
+    &--second::before {
+      background-image: url("../img/icon-tub@2x.png");
+    }
+
+    &--third::before {
+      background-image: url("../img/icon-eat@2x.png");
+    }
+
+    &--fourth::before {
+      background-image: url("../img/icon-alarm@2x.png");
+    }
+  }
+
+  &::after {
+    position: absolute;
+    display: none;
+    content: counter(item_number);
+    top: 15px;
+    right: 76px;
+    min-width: 136px;
+    font-size: 281px;
+    line-height: 235px;
+    font-family: "Oswald", "Arial", sans-serif;
+    color: $basic-grey;
+    z-index: -1;
+    text-align: center;
+
+    @media (min-width: $tablets) {
+      display: block;
+    }
+
+    @media (min-width: $desktops) {
+      right: -4px;
+    }
+  }
+
+  &:first-child::after {
+    right: 82px;
+
+    @media (min-width: $desktops) {
+      right: 2px;
+    }
+  }
+}
+
+.instruction__item-text {
+  @include list-none;
+
+  width: 100%;
+
+  @media (min-width: $tablets) {
+    width: 245px;
+  }
+}
