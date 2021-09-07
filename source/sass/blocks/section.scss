@@ -1,0 +1,23 @@
+.promo {
+  // max-width: 100%;
+  // overflow-x: hidden;
+
+  @media (min-width: $desktops) {
+    // padding-top: 80px;
+  }
+}
+
+.additional-section {
+  margin-top: 28px;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablets) {
+    margin-top: 68px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: $desktops) {
+    margin-top: 75px;
+    padding-bottom: 86px;
+  }
+}

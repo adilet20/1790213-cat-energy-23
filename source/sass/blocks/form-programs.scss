@@ -1,0 +1,65 @@
+.field-program__input {
+  @include visually-hidden;
+}
+
+.field-program__label {
+  position: relative;
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 46px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $special-dark-grey-2;
+  user-select: none;
+
+  @media (min-width: $tablets) {
+    padding-top: 16px;
+    padding-left: 60px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    border: 1px solid $special-grey;
+    border-radius: 50%;
+
+    @media (min-width: $tablets) {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+    }
+  }
+}
+
+.field-program__input:checked ~ .field-program__label::before {
+  background-color: $basic-green;
+  background-clip: content-box;
+}
+
+.field-program__input:focus ~ .field-program__label::before {
+  border-color: $grey-2;
+}
+
+.field-program__input:not(:disabled) ~ .field-radio__program:hover::before {
+  border-color: $grey-2;
+}
+
+.field-program__input:disabled ~ .field-program__label {
+  opacity: 0.3;
+}

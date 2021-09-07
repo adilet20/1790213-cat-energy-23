@@ -1,0 +1,71 @@
+.field-addition__input {
+  @include visually-hidden;
+}
+
+.field-addition__label {
+  position: relative;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 46px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $special-dark-grey-2;
+  user-select: none;
+
+  @media (min-width: $tablets) {
+    padding-top: 26px;
+    padding-left: 160px;
+    padding-bottom: 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    // padding-top: 6px;
+    // padding-right: 3px;
+    // padding-bottom: 6px;
+    // padding-left: 4px;
+    border: 1px solid $special-grey;
+
+    @media (min-width: $tablets) {
+      top: 16px;
+      width: 40px;
+      height: 40px;
+      // padding-top: 11px;
+      // padding-right: 8px;
+      // padding-bottom: 11px;
+      // padding-left: 9px;
+    }
+  }
+}
+
+.field-addition__input:checked ~ .field-addition__label::before {
+  background: url("../img/icon-check.svg") no-repeat center;
+  background-size: 21px auto;
+  background-clip: content-box;
+}
+
+.field-addition__input:focus ~ .field-addition__label::before {
+  border-color: $grey-2;
+}
+
+.field-addition__input:not(:disabled) ~ .field-addition__label:hover::before {
+  border-color: $grey-2;
+}
+
+.field-addition__input:disabled ~ .field-addition__label {
+  opacity: 0.3;
+}
